@@ -1,74 +1,75 @@
-# Stockalytics Showcase
+# Stockalytics Case Study
 
-Stockalytics is a private stock analytics platform that I am building to explore market data, technical signals, market structure, options metrics, fundamentals, and news context in one dashboard.
+Stockalytics is a private stock analytics platform I am building to bring technical signals, market structure, options-related metrics, fundamentals, and news context into one workflow.
 
-> This is a public showcase repository. The production source code is private because the real project is actively developed and connected to a deployed backend, database, workers, and market-data provider integrations.
+> This repository is a public case study. It intentionally does not include the production frontend, backend, database schema, deployment configuration, provider integrations, or internal routes.
 
-## What This Repository Contains
+## Live Project
 
-- A small mock React/Vite app that demonstrates the product workflow
-- Local mock data only
-- A sanitized architecture overview
-- No production backend code, deployment scripts, provider clients, database migrations, secrets, or live URLs
+- Deployed app: https://stockalytics.vercel.app
+- Full source: private for security
 
-## Screenshot
+The deployed app may require authentication or live backend availability. Public screenshots will be added only when there is a safe capture that accurately represents the real product without exposing private data.
 
-![Stockalytics mock dashboard](public/screenshots/dashboard.png)
+## What The Product Does
 
-## Key Features Represented
+Stockalytics is designed to help users move from quick ticker triage to deeper evidence:
 
-- Dashboard and ticker analysis concept
-- Technical signal summary
-- Market structure workflow
-- Options level visualization concept
-- News intelligence summaries
-- Fundamentals and risk framing
+- dashboard and ticker analysis pages
+- overview, technical, market structure, options, news, and fundamentals sections
+- live/near-live market data workflows
+- options analysis concepts such as wall levels, gamma-related signals, and quality diagnostics
+- news and fundamentals summaries
+- frontend route splitting for heavier analysis pages
+- private backend worker/API architecture for provider calls and data processing
 
-## Tech Stack Represented
+## Tech Stack
+
+### Frontend
 
 - React
 - TypeScript
 - Vite
-- CSS modules-style plain CSS
-- Mock analytical data
+- Tailwind CSS
+- React Query
+- Recharts / charting components
+
+### Backend and Data Layer
+
+- Python
+- FastAPI
+- PostgreSQL / Supabase
+- Private worker/job processing
+- Market data and news provider integrations
+- VPS deployment
 
 ## Sanitized Architecture
 
 ```text
-React dashboard
-      |
-      v
-Private API layer
-      |
-      v
-Market data / news / analysis providers
-      |
-      v
+React / Vite frontend
+        |
+        v
+Private API and worker layer
+        |
+        v
+Market data, options, news, and fundamentals providers
+        |
+        v
 Database and cache layer
 ```
 
-Production domains, routes, queue details, database schema, worker logic, and provider integrations are intentionally omitted.
+Production domains, internal API routes, database migrations, worker logic, provider clients, and deployment scripts are intentionally omitted.
 
-## Run Locally
+## Why This Is A Case Study Instead Of Full Source
 
-```bash
-npm install
-npm run dev
-```
+The real project is connected to deployed backend infrastructure and third-party provider integrations. Publishing the full source could expose implementation details that increase operational and security risk.
 
-Build check:
-
-```bash
-npm run build
-```
-
-## Security Note
-
-The full Stockalytics source remains private because it is connected to a live backend and contains implementation details that should not be exposed in a public portfolio repository. I can discuss selected architecture and implementation tradeoffs in interviews.
+This repository exists to explain the project clearly for portfolio review while keeping the production system private.
 
 ## What I Learned
 
-- Designing a data-heavy dashboard around a clear analysis workflow
-- Separating frontend presentation from backend data orchestration
-- Thinking about public portfolio safety before exposing source code
-- Communicating complex financial tooling without revealing production internals
+- Designing analysis workflows for data-heavy dashboards
+- Separating frontend UX from backend data orchestration
+- Handling private provider integrations and environment-based configuration
+- Communicating sensitive production work safely in a public portfolio
+
