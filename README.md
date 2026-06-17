@@ -11,6 +11,10 @@ Stockalytics is a private stock analytics platform that I am building to explore
 - A sanitized architecture overview
 - No production backend code, deployment scripts, provider clients, database migrations, secrets, or live URLs
 
+## Screenshot
+
+![Stockalytics mock dashboard](public/screenshots/dashboard.png)
+
 ## Key Features Represented
 
 - Dashboard and ticker analysis concept
@@ -68,4 +72,3 @@ The full Stockalytics source remains private because it is connected to a live b
 - Separating frontend presentation from backend data orchestration
 - Thinking about public portfolio safety before exposing source code
 - Communicating complex financial tooling without revealing production internals
-
